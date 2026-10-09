@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover premium new and pre-owned cars at Velocity Motors.">
+  <title>Velocity Motors | Premium Car Showroom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    VELOCITY MOTORS <span>•</span> PREMIUM AUTOMOTIVE
+    <a href="#contact">Contact our showroom</a>
+  </div>
+
+  <header class="header">
+    <a href="#home" class="logo"><span>V</span> VELOCITY <small>MOTORS</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#inventory">Our Cars</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="button button-outline" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
+    <button class="button button-gold" id="adminButton">Admin dashboard</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR NEXT JOURNEY STARTS HERE</span>
+        <h1>Find your next<br><span>great drive.</span></h1>
+        <p>Explore a curated selection of new and pre-owned cars, with transparent pricing and personal service.</p>
+        <div class="hero-actions">
+          <a href="#inventory" class="button button-gold">Explore inventory ↗</a>
+          <a href="#contact" class="text-link">Visit our showroom →</a>
+        </div>
+        <div class="hero-points">
+          <div><strong>New & used</strong><small>Cars for every journey</small></div>
+          <div><strong>Clear pricing</strong><small>Prices in Indian rupees</small></div>
+          <div><strong>Personal service</strong><small>Help at every step</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div>✓ Carefully selected cars</div>
+      <div>₹ Transparent INR pricing</div>
+      <div>◇ Test-drive enquiries</div>
+      <div>⌂ Personal assistance</div>
+    </section>
+
+    <section class="section inventory" id="inventory">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark">THE COLLECTION</span>
+          <h2>Cars worth<br><span>looking forward to.</span></h2>
+        </div>
+        <p>Explore our sample inventory. Contact the showroom to verify current availability and final pricing.</p>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="Search make, model, fuel..." aria-label="Search cars">
+
+        <select id="conditionFilter" aria-label="Condition">
+          <option value="all">New & pre-owned</option>
+          <option value="New">New cars</option>
+          <option value="Used">Pre-owned cars</option>
+        </select>
+
+        <select id="brandFilter" aria-label="Brand">
+          <option value="all">All brands</option>
+        </select>
+
+        <select id="fuelFilter" aria-label="Fuel type">
+          <option value="all">All fuel types</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="Electric">Electric</option>
+        </select>
+
+        <select id="sortFilter" aria-label="Sort cars">
+          <option value="featured">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="year">Newest model year</option>
+        </select>
+
+        <button id="clearFilters" class="button button-outline">Reset filters</button>
+      </div>
+
+      <div class="category-tabs" id="categoryTabs">
+        <button class="active" data-category="all">All cars</button>
+        <button data-category="SUV">SUV</button>
+        <button data-category="Sedan">Sedan</button>
+        <button data-category="Hatchback">Hatchback</button>
+        <button data-category="Luxury">Luxury</button>
+        <button data-category="Sports">Sports</button>
+      </div>
+
+      <div class="inventory-meta">
+        <span id="resultCount">0 cars</span>
+        <span>Prices shown in INR (₹)</span>
+      </div>
+
+      <div class="car-grid" id="carGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No matching cars found</h3>
+        <p>Try changing your search or filters.</p>
+      </div>
+    </section>
+
+    <section class="feature" id="services">
+      <div>
+        <span class="eyebrow">THE VELOCITY EXPERIENCE</span>
+        <h2>More than a car.<br><span>A better journey.</span></h2>
+        <p>From choosing the right vehicle to arranging a test drive, our showroom is designed to make your next step easier.</p>
+        <a href="#contact" class="button button-gold">Talk to our team →</a>
+      </div>
+      <div class="feature-image"></div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-copy">
+        <span class="eyebrow dark">LET'S GET YOU MOVING</span>
+        <h2>Your next car<br><span>starts with a conversation.</span></h2>
+        <p>Interested in a vehicle or want to schedule a visit? Leave your details in this demo form.</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Hours:</strong> Monday–Saturday, 9:30 AM–7:00 PM</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <label>Your name<input name="name" required maxlength="100" placeholder="Full name"></label>
+        <label>Phone number<input name="phone" type="tel" required maxlength="20" placeholder="+91"></label>
+        <label>Email address<input name="email" type="email" maxlength="150" placeholder="you@example.com"></label>
+        <label>What are you looking for?
+          <select name="interest">
+            <option>Buying a new car</option>
+            <option>Buying a pre-owned car</option>
+            <option>Booking a test drive</option>
+            <option>General enquiry</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="3" maxlength="1000" placeholder="Tell us what you need"></textarea></label>
+        <button class="button button-dark" type="submit">Submit enquiry →</button>
+        <p class="form-note" id="contactFeedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo"><span>V</span> VELOCITY <small>MOTORS</small></a>
+    <p>© <span id="currentYear"></span> Velocity Motors. Demo showroom website.</p>
+    <a href="#inventory">Browse cars ↑</a>
+  </footer>
+
+  <dialog id="vehicleDialog" class="dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <div id="vehicleDetails"></div>
+    <form id="vehicleEnquiryForm" class="dialog-form">
+      <input type="hidden" name="carId">
+      <label>Your name<input name="name" required maxlength="100"></label>
+      <label>Phone number<input name="phone" type="tel" required maxlength="20"></label>
+      <button class="button button-gold" type="submit">Enquire about this car</button>
+      <p id="vehicleFeedback" role="status"></p>
+    </form>
+  </dialog>
+
+  <dialog id="adminDialog" class="dialog admin-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <section id="adminAccess">
+      <span class="eyebrow dark">RESTRICTED ADMIN ACCESS</span>
+      <h2 id="accessTitle">Admin access</h2>
+      <p id="accessDescription">Set a passcode to protect this dashboard on this browser.</p>
+      <form id="adminAccessForm" class="contact-form">
+        <label>Admin passcode<input name="passcode" type="password" required minlength="4" maxlength="100" autocomplete="current-password" placeholder="At least 4 characters"></label>
+        <button class="button button-gold" id="accessSubmit" type="submit">Set passcode</button>
+        <p id="accessFeedback" role="status"></p>
+      </form>
+      <p class="access-note">Local demo protection only. This is not secure authentication for a live website. If you forget the passcode, clear this site's browser data.</p>
+    </section>
+    <div id="adminPanel" hidden>
+    <span class="eyebrow dark">LOCAL DEMO ONLY</span>
+    <h2>Showroom dashboard</h2>
+    <p class="warning">Passcode protection is local to this browser and is not secure authentication. Data is stored here only and is not shared with the real showroom.</p>
+
+    <div class="stats">
+      <div><small>Vehicles</small><strong id="dashCarCount">0</strong></div>
+      <div><small>New cars</small><strong id="dashNewCount">0</strong></div>
+      <div><small>Pre-owned</small><strong id="dashUsedCount">0</strong></div>
+      <div><small>Enquiries</small><strong id="dashEnquiryCount">0</strong></div>
+    </div>
+
+    <h3 id="carFormTitle">Add a vehicle</h3>
+    <form id="carForm" class="admin-form">
+      <input type="hidden" name="id">
+      <label>Car name<input name="name" required maxlength="100" placeholder="e.g. Hyundai Creta"></label>
+      <label>Brand<input name="brand" required maxlength="60" placeholder="e.g. Hyundai"></label>
+      <label>Condition<select name="condition"><option>New</option><option>Used</option></select></label>
+      <label>Category<select name="category"><option>SUV</option><option>Sedan</option><option>Hatchback</option><option>Luxury</option><option>Sports</option></select></label>
+      <label>Fuel<select name="fuel"><option>Petrol</option><option>Diesel</option><option>Hybrid</option><option>Electric</option></select></label>
+      <label>Price (₹)<input name="price" type="number" required min="1" step="1000"></label>
+      <label>Model year<input name="year" type="number" required min="1990" max="2035"></label>
+      <label>External car image URL<input name="image" type="url" placeholder="https://..."></label>
+      <label class="full">Description<input name="description" maxlength="200" placeholder="Automatic · Petrol · Low mileage"></label>
+      <div class="form-actions full">
+        <button class="button button-gold" id="saveCarButton" type="submit">Save vehicle</button>
+        <button class="button button-outline" id="cancelEdit" type="button" hidden>Cancel edit</button>
+      </div>
+      <p id="adminFeedback" class="full" role="status"></p>
+    </form>
+
+    <div class="admin-list-heading">
+      <h3>Inventory management</h3>
+      <button id="exportCsv" class="button button-outline">Export CSV</button>
+    </div>
+    <div id="adminCarList" class="admin-list"></div>
+
+    <h3>Local enquiries</h3>
+    <div id="adminEnquiries" class="admin-list"></div>
+    <button id="clearEnquiries" class="button button-outline">Clear local enquiries</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
